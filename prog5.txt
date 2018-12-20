@@ -1,0 +1,13 @@
+INPUT
+        ORG  $00002000
+        MOVE  #50 $00002000
+        TRAP   #1
+     LOOP1  MOVE  DO $0002004
+        MOVE  $00002000 DO 
+         ADD  $00002004 DO
+         MOVE DO $00002002
+        LOOP2    ADDI #12 $00002002
+        TRAP #2
+        TRAP #0  
+
+
